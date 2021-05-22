@@ -22,7 +22,7 @@ namespace isaacldev.domain
         public const string UTM_CAMPAIGN = "utm_campaign";
         public const string WTMCID = "WT.mc_id";
 
-        public const string SHORTENER_BASE = "http://isaacl.dev/";
+        public const string SHORTENER_BASE = "http://cloudchris.ws";
 
         public const string TWITTER_CONSUMER_KEY = "TwitterConsumerKey";
         public const string TWITTER_CONSUMER_SECRET = "TwitterConsumerSecret";

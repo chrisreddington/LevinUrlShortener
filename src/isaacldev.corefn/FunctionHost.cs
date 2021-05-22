@@ -36,14 +36,14 @@ namespace isaacldev.corefn
 
         // this is redirect target when the short URL isn't found
         public readonly string FallbackUrl = Environment.GetEnvironmentVariable(Utility.ENV_FALLBACK) ??
-            "https://www.isaaclevin.com/?utm_source=isaacl&utm_medium=redirect&utm_campaign=isaacl_dev";
+            "https://www.cloudwithchris.com/?utm_source=cloudchrisws&utm_medium=redirect&utm_campaign=cloudchris_ws";
 
         // for tagging, the "utm_source" or source part of WebTrends tag 
         public readonly string Source = Environment.GetEnvironmentVariable(Utility.ENV_SOURCE) ??
-            "isaacl";
+            "cloudchrisws";
 
         public readonly string ShortenerBase = Environment.GetEnvironmentVariable(Utility.SHORTENER_BASE) ??
-            "http://isaacl.dev/";
+            "http://cloudchris.ws/";
 
         public readonly string TwitterConsumerKey = Environment.GetEnvironmentVariable(Utility.TWITTER_CONSUMER_KEY);
 
@@ -255,7 +255,7 @@ namespace isaacldev.corefn
             Route = "UrlRedirect/")]HttpRequestMessage req,
            ILogger log)
         {
-            var redirectUrl = "https://www.isaaclevin.com/";
+            var redirectUrl = "https://www.cloudwithchris.com/";
 
             var response = req.CreateResponse(HttpStatusCode.Redirect);
             response.Headers.Add("Location", redirectUrl);

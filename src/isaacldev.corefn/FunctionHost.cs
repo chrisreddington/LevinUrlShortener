@@ -18,6 +18,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Tweetinvi;
+using Newtonsoft.Json;
 
 namespace isaacldev.corefn
 {
@@ -140,7 +141,8 @@ namespace isaacldev.corefn
                 return check;
             }
 
-            ShortRequest input = await req.Content.ReadAsAsync<ShortRequest>();
+            string rawJsonInput = await req.Content.ReadAsStringAsync();
+            ShortRequest input = JsonConvert.DeserializeObject<ShortRequest>(rawJsonInput);
 
             if (input == null)
             {
